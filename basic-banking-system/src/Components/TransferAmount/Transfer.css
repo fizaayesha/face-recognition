@@ -1,0 +1,25 @@
+.transfer-card{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 40px;
+    color: white;
+}
+.Buttons{
+    margin-left: 1.5rem;
+}
+.sender{
+    width: fit-content;
+}
+.contentrow{
+    margin-top: 1.5rem;
+}
+.avatar{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}

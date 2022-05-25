@@ -1,0 +1,68 @@
+.card {
+    margin-top: 20px;
+}
+
+.contact {
+    background-color: rgb(201, 198, 198);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 160px;
+    padding-right: 160px;
+    color: white;
+}
+
+
+.contform {
+    background-color: grey;
+    border-radius: 5px;
+    width: 30rem;
+    padding: 10px;
+    margin: 20px;
+    gap: 5rem;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.contform button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputt {
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: var(--primary-color);
+
+}
+
+
+.form-control {
+    background-color: rgb(201, 198, 198);
+}
+
+#btns {
+    background-color: var(--primary-color);
+    outline: var(--primary-color);
+    color: white;
+}
+
+#btns:hover {
+    background-color: #161d20;
+    outline: #161d20;
+    color: white;
+}
+
+@media only screen and (max-width: 800px) {
+    .contact {
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+}

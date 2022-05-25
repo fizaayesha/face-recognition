@@ -1,0 +1,114 @@
+/* styling for every component is here */
+
+/* HOME COMPONENT */
+body {
+    background-color: white;
+}
+
+.hs {
+    background-color: rgb(201, 198, 198);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.hs1 {
+    text-align: center;
+    color: white;
+    padding: 40px;
+    background-color: gray;
+    width: 400px;
+    margin: 20px;
+    gap: 3rem;
+    font-weight: bolder;
+}
+
+
+/*HOME, ABOUT, INSTRUCTIONS, MAINPAGE COMPONENTS */
+#carouselExampleCaptions {
+    background-color: gray;
+}
+
+.blogItem #uni {
+    height: 12rem;
+    background-color: grey;
+    width: 100%;
+    background-size: cover;
+}
+
+
+.blog {
+    background-color: rgb(201, 198, 198);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 160px;
+    padding-right: 160px;
+}
+
+.blogList {
+    list-style-type: none;
+    display: contents;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.blogItem {
+    background-color: var(--primary-color);
+    width: 300px;
+    padding-bottom: 15px;
+    margin: 20px;
+    gap: 3rem;
+}
+
+.blogItem h3 {
+    color: rgb(241, 239, 239);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.blogItem p {
+    color: white;
+}
+
+@media only screen and (max-width: 1300px) {
+    .blogList {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .blogItem {
+        margin: 20px;
+    }
+
+    .blogList {
+        grid-template-columns: 1fr;
+    }
+
+    .blog {
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+}
+
+/* FOOTER SECTION (common for all component)*/
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 16px;
+    background: rgb(37, 37, 41);
+    color: white;
+}
