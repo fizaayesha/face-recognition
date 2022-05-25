@@ -53,7 +53,7 @@ const Transfer = (props) => {
           />
           <Reactbootstrap.Card.Body>
             <Reactbootstrap.Card.Title>
-              Username: {temp.username}
+              Name: {temp.name}
             </Reactbootstrap.Card.Title>
             <Reactbootstrap.Card.Title>
               Amount: ₹.{temp.amount}
@@ -99,7 +99,7 @@ const Transfer = (props) => {
                 <Reactbootstrap.Col>
                   <Reactbootstrap.Button
                     className="Buttons"
-                    onClick={() => history.push("/users")}
+                    onClick={() => history.push("/profile")}
                     variant="primary"
                   >
                     Go Back

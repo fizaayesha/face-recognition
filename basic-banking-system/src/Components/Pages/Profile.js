@@ -12,9 +12,9 @@ function Profile() {
   }, []);
 
     let history = useHistory();
-  const transferHAndler = (Id) => {
+  const transferHAndler = (username) => {
     // console.log(users);
-    history.push({ pathname: `/transfer/${Id}`, state: { users: users } });
+    history.push({ pathname: `/transfer/${username}`, state: { users: users } });
   };
   console.log(process.env.REACT_APP_SERVER_URL);
   return (

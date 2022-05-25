@@ -9,7 +9,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 10rem;
+    margin-top: 6rem;
     padding: 10px;
     color: white;
 }
@@ -22,9 +22,6 @@ body {
     margin-left: 40%;
 }
 
-.success-card {
-    border-width: 2px;
-}
 
 .success-title {
     margin-left: 17% !important;

@@ -22,14 +22,14 @@ router.route("/transactions/:id").get(function (req, res) {
   });
 }); //add trasactions
 
-router.route("/transactions").post(function (req, res) {
-  var transactionId = req.body.transactionId;
+router.route("/transactions/add").post(function (req, res) {
+  // const transactionId = req.body.transactionId;
   var sender = req.body.sender;
   var receiver = req.body.receiver;
   var amount = req.body.amount;
   var date = req.body.date;
   var newtransaction = new TransHist({
-    transactionId: transactionId,
+    // transactionId,
     sender: sender,
     receiver: receiver,
     amount: amount,

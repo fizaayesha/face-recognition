@@ -5,20 +5,17 @@ const router = new express.Router();
 const Register = require("../models/registerSchema");
 
 //registrations
-router.route('/profile').get((req,res)=>{
+router.route("/profile").get((req, res) => {
   Register.find()
-      .then(
-        users=> res.json(users)
-        )
-      .catch(err=>res.status(400).json('Error:'+err));
+    .then((users) => res.json(users))
+    .catch((err) => res.status(400).json("Error:" + err));
 });
 
-router.route('/profile/:id').get((req,res)=>{
+router.route("/profile/:id").get((req, res) => {
   Register.findById(req.params.id)
-      .then(users=> res.json(users))
-      .catch(err=>res.status(400).json('Error:'+err));
+    .then((users) => res.json(users))
+    .catch((err) => res.status(400).json("Error:" + err));
 });
-
 
 router.route("/register").post(async (req, res) => {
   try {
@@ -49,6 +46,44 @@ router.route("/register").post(async (req, res) => {
   } catch (err) {
     res.status(400).send(err);
   }
+});
+
+// router.route("/register/:id").put(async (req, res) => {
+//   Register.findById(req.params.id)
+//     .then((user) => {
+//       user.name = req.body.name;
+//       user.account = req.body.account;
+//       user.phone = req.body.phone;
+//       user.adhaar = req.body.adhaar;
+//       user.email = req.body.email;
+//       user.username = req.body.username;
+//       user.password = req.body.password;
+//       user.amount = req.body.amount;
+//       user
+//         .save()
+//         .then(() => res.json("User's record updated"))
+//         .catch((err) => res.status(400).json("Error:" + err));
+//     })
+//     .catch((err) => res.status(400).json("Error:" + err));
+// });
+
+router.route("/register/update/:id").post(async(req, res) => {
+  Register.findById(req.params.id)
+    .then((user) => {
+      user.name = req.body.name;
+      user.account = req.body.account;
+      user.phone = req.body.phone;
+      user.adhaar = req.body.adhaar;
+      user.email = req.body.email;
+      user.username = req.body.username;
+      user.password = req.body.password;
+      user.amount = req.body.amount;
+      user
+        .save()
+        .then(() => res.json("user database updated"))
+        .catch((err) => res.status(400).json("Error:" + err));
+    })
+    .catch((err) => res.status(400).json("Error:" + err));
 });
 
 router.route("/login").post(async (req, res) => {

@@ -9,10 +9,10 @@ const Successport = () => {
   const history = useHistory();
 
   const buttonHandler = (event) => {
-    if (event.target.value === "Mainpage") {
-      history.push("/mainpage");
+    if (event.target.value === "Profile") {
+      history.push("/profile");
     } else {
-      history.push("/users");
+      history.push("/transactions");
     }
   };
 
@@ -21,7 +21,7 @@ const Successport = () => {
       className="success-portal"
     >
       <Rbs.Card
-        style={{ width: "20rem", height: "15rem" }}
+        style={{ width: "20rem", height: "18rem" }}
         className="success-card"
         bg="secondary"
         text="light"
@@ -33,17 +33,17 @@ const Successport = () => {
             Transaction Successful
           </Rbs.Card.Title>
           <Rbs.Card.Text>
-            Click on the 'Dashboard' button to navigate to Dashboard page or else Click on
-            'More' button to make another transaction.
+            Click on the 'Profile' button to navigate to Profile page or else Click on
+            'Histry' button to see transaction history.
           </Rbs.Card.Text>
           <Rbs.Row>
             <Rbs.Col className="success-buttons" size="lg" mr="auto">
               <Rbs.Button
                 variant="primary"
-                value="Mainpage"
+                value="Profile"
                 onClick={(e) => buttonHandler(e)}
               >
-                Dashboard
+                Profile
               </Rbs.Button>
             </Rbs.Col>
             <Rbs.Col size="lg" className="success-buttons" mr="auto">
@@ -52,7 +52,7 @@ const Successport = () => {
                 value="more"
                 onClick={(e) => buttonHandler(e)}
               >
-                More
+                History
               </Rbs.Button>
             </Rbs.Col>
           </Rbs.Row>

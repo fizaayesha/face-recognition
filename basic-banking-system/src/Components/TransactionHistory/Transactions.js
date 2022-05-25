@@ -20,10 +20,9 @@ const Transactions = () => {
       <div className="users">
         <div className="user">
           {transaction.map((trans) => (
-            <div className="body" key={trans._id}>
+            <div className="body" key={trans.username}>
               <img src={avatar} alt="avatar" style={{ width: "10rem" }} />
               <div className="box">
-                <h6>Transaction Id: {trans.transactionId}</h6>
                 <h6>
                   Sender:
                   {trans.sender}

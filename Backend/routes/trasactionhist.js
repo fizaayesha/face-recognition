@@ -16,14 +16,14 @@ router.route("/transactions/:id").get((req, res) => {
 });
 
 //add trasactions
-router.route("/transactions").post((req, res) => {
-  const transactionId = req.body.transactionId;
+router.route("/transactions/add").post((req, res) => {
+  // const transactionId = req.body.transactionId;
   const sender = req.body.sender;
   const receiver = req.body.receiver;
   const amount = req.body.amount;
   const date = req.body.date;
   const newtransaction = new TransHist({
-    transactionId,
+    // transactionId,
     sender,
     receiver,
     amount,

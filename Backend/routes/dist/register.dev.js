@@ -11,18 +11,18 @@ var router = new express.Router();
 var Register = require("../models/registerSchema"); //registrations
 
 
-router.route('/profile').get(function (req, res) {
+router.route("/profile").get(function (req, res) {
   Register.find().then(function (users) {
     return res.json(users);
   })["catch"](function (err) {
-    return res.status(400).json('Error:' + err);
+    return res.status(400).json("Error:" + err);
   });
 });
-router.route('/profile/:id').get(function (req, res) {
+router.route("/profile/:id").get(function (req, res) {
   Register.findById(req.params.id).then(function (users) {
     return res.json(users);
   })["catch"](function (err) {
-    return res.status(400).json('Error:' + err);
+    return res.status(400).json("Error:" + err);
   });
 });
 router.route("/register").post(function _callee(req, res) {
@@ -73,84 +73,132 @@ router.route("/register").post(function _callee(req, res) {
       }
     }
   }, null, null, [[0, 17]]);
-});
-router.route("/login").post(function _callee2(req, res) {
-  var username, password, userExist, isMatch, token;
+}); // router.route("/register/:id").put(async (req, res) => {
+//   Register.findById(req.params.id)
+//     .then((user) => {
+//       user.name = req.body.name;
+//       user.account = req.body.account;
+//       user.phone = req.body.phone;
+//       user.adhaar = req.body.adhaar;
+//       user.email = req.body.email;
+//       user.username = req.body.username;
+//       user.password = req.body.password;
+//       user.amount = req.body.amount;
+//       user
+//         .save()
+//         .then(() => res.json("User's record updated"))
+//         .catch((err) => res.status(400).json("Error:" + err));
+//     })
+//     .catch((err) => res.status(400).json("Error:" + err));
+// });
+
+router.route("/register/update/:id").post(function _callee2(req, res) {
   return regeneratorRuntime.async(function _callee2$(_context2) {
     while (1) {
       switch (_context2.prev = _context2.next) {
         case 0:
-          _context2.prev = 0;
+          Register.findById(req.params.id).then(function (user) {
+            user.name = req.body.name;
+            user.account = req.body.account;
+            user.phone = req.body.phone;
+            user.adhaar = req.body.adhaar;
+            user.email = req.body.email;
+            user.username = req.body.username;
+            user.password = req.body.password;
+            user.amount = req.body.amount;
+            user.save().then(function () {
+              return res.json("user database updated");
+            })["catch"](function (err) {
+              return res.status(400).json("Error:" + err);
+            });
+          })["catch"](function (err) {
+            return res.status(400).json("Error:" + err);
+          });
+
+        case 1:
+        case "end":
+          return _context2.stop();
+      }
+    }
+  });
+});
+router.route("/login").post(function _callee3(req, res) {
+  var username, password, userExist, isMatch, token;
+  return regeneratorRuntime.async(function _callee3$(_context3) {
+    while (1) {
+      switch (_context3.prev = _context3.next) {
+        case 0:
+          _context3.prev = 0;
           //get body or data
           username = req.body.username;
           password = req.body.password; //find user if exist
 
-          _context2.next = 5;
+          _context3.next = 5;
           return regeneratorRuntime.awrap(Register.findOne({
             username: username
           }));
 
         case 5:
-          userExist = _context2.sent;
+          userExist = _context3.sent;
 
           if (!userExist) {
-            _context2.next = 21;
+            _context3.next = 21;
             break;
           }
 
-          _context2.next = 9;
+          _context3.next = 9;
           return regeneratorRuntime.awrap(bcryptjs.compare(password, userExist.password));
 
         case 9:
-          isMatch = _context2.sent;
+          isMatch = _context3.sent;
 
           if (!isMatch) {
-            _context2.next = 18;
+            _context3.next = 18;
             break;
           }
 
-          _context2.next = 13;
+          _context3.next = 13;
           return regeneratorRuntime.awrap(userExist.generateToken());
 
         case 13:
-          token = _context2.sent;
+          token = _context3.sent;
           res.cookie("jwt", token, {
             //expires token in 24 hours
             expires: new Date(Date.now() + 86400000),
             httpOnly: true
           });
-          return _context2.abrupt("return", res.status(200).send("LoggedIn"));
+          return _context3.abrupt("return", res.status(200).send("LoggedIn"));
 
         case 18:
-          return _context2.abrupt("return", res.status(400).send("Invalid credentials"));
+          return _context3.abrupt("return", res.status(400).send("Invalid credentials"));
 
         case 19:
-          _context2.next = 22;
+          _context3.next = 22;
           break;
 
         case 21:
-          return _context2.abrupt("return", res.status(400).send("Invalid credentials"));
+          return _context3.abrupt("return", res.status(400).send("Invalid credentials"));
 
         case 22:
-          _context2.next = 27;
+          _context3.next = 27;
           break;
 
         case 24:
-          _context2.prev = 24;
-          _context2.t0 = _context2["catch"](0);
-          return _context2.abrupt("return", res.status(400).send(_context2.t0));
+          _context3.prev = 24;
+          _context3.t0 = _context3["catch"](0);
+          return _context3.abrupt("return", res.status(400).send(_context3.t0));
 
         case 27:
         case "end":
-          return _context2.stop();
+          return _context3.stop();
       }
     }
   }, null, null, [[0, 24]]);
 });
-router.route("/logout").get(function _callee3(req, res) {
-  return regeneratorRuntime.async(function _callee3$(_context3) {
+router.route("/logout").get(function _callee4(req, res) {
+  return regeneratorRuntime.async(function _callee4$(_context4) {
     while (1) {
-      switch (_context3.prev = _context3.next) {
+      switch (_context4.prev = _context4.next) {
         case 0:
           res.clearCookie("jwt", {
             path: "/"
@@ -159,7 +207,7 @@ router.route("/logout").get(function _callee3(req, res) {
 
         case 2:
         case "end":
-          return _context3.stop();
+          return _context4.stop();
       }
     }
   });

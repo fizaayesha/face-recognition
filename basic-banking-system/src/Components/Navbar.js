@@ -67,6 +67,15 @@ function Navbar(props) {
                 <SupervisorAccountIcon className="me-1" />
                 Register
               </NavLink>
+              <NavLink
+                to="/logout"
+                className="btn btn-outline-primary ms-2 px-3 rounded-pill fw-bold"
+                id="btn2"
+                type="submit"
+                >
+                <PowerSettingsNewIcon className="me-2" />
+                Logout
+              </NavLink>
                 </>
                : 
                <>
@@ -78,15 +87,6 @@ function Navbar(props) {
                 >
                 <StreetviewIcon className="me-2" />
                 Profile
-              </NavLink>
-              <NavLink
-                to="/logout"
-                className="btn btn-outline-primary ms-2 px-3 rounded-pill fw-bold"
-                id="btn2"
-                type="submit"
-              >
-                <PowerSettingsNewIcon className="me-2" />
-                Logout
               </NavLink>
             </>
           }
