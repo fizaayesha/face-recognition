@@ -3,7 +3,6 @@
 ### First of all in Backend folder create a new file and name it `.env` now copy the code given below and paste it in `.env` file
 
 ```
-ATLAS_URI=mongodb+srv://Ayesha:Ayesha@cluster0.ijyss.mongodb.net/demo?retryWrites=true&w=majority
 SECRET_KEY=youcanchooseanysecretkeyof32character
 ```
 
