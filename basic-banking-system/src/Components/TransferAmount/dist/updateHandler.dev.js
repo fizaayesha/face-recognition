@@ -14,7 +14,9 @@ var updateHandler = function updateHandler(sender, receiver, amount) {
   console.log(receiver);
   console.log(amount);
   var transHistory = {
-    transactionId: Number(String(sender.customerId) + String(receiver.customerId)),
+    // transactionId: Number(
+    //   String(sender.customerId) + String(receiver.customerId)
+    // ),
     sender: "".concat(sender.name),
     receiver: "".concat(receiver.name),
     amount: Number(amount)

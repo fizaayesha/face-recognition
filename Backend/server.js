@@ -23,12 +23,12 @@ connection.once("open", () => {
   console.log("mongodb database connection established successfully!");
 });
 
-const customerRouter = require("./routes/customerdets");
+// const customerRouter = require("./routes/customerdets");
 const transactionRouter = require("./routes/trasactionhist");
 const registrations = require("./routes/register");
 const contactRouter = require("./routes/contact");
 const authenticate = require("./middleware/authentication");
-app.use(customerRouter);
+// app.use(customerRouter);
 app.use(transactionRouter);
 app.use(registrations);
 app.use(contactRouter);

@@ -5,9 +5,9 @@ export const updateHandler = (sender, receiver, amount) => {
   console.log(receiver);
   console.log(amount);
   const transHistory = {
-    transactionId: Number(
-      String(sender.customerId) + String(receiver.customerId)
-    ),
+    // transactionId: Number(
+    //   String(sender.customerId) + String(receiver.customerId)
+    // ),
     sender: `${sender.name}`,
     receiver: `${receiver.name}`,
     amount: Number(amount),

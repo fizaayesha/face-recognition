@@ -32,9 +32,7 @@ mongoose.connect(uri, {
 var connection = mongoose.connection;
 connection.once("open", function () {
   console.log("mongodb database connection established successfully!");
-});
-
-var customerRouter = require("./routes/customerdets");
+}); // const customerRouter = require("./routes/customerdets");
 
 var transactionRouter = require("./routes/trasactionhist");
 
@@ -42,9 +40,9 @@ var registrations = require("./routes/register");
 
 var contactRouter = require("./routes/contact");
 
-var authenticate = require("./middleware/authentication");
+var authenticate = require("./middleware/authentication"); // app.use(customerRouter);
 
-app.use(customerRouter);
+
 app.use(transactionRouter);
 app.use(registrations);
 app.use(contactRouter);
