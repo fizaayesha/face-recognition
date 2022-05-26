@@ -3,7 +3,6 @@
 ### First of all in Backend folder create a new file and name it `.env` now copy the code given below and paste it in `.env` file
 
 ```
-SECRET_KEY=youcanchooseanysecretkeyof32character
 ```
 
 #
