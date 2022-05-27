@@ -103,7 +103,7 @@ body {
 }
 
 /* FOOTER SECTION (common for all component)*/
-.footer {
+/* .footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,4 +111,4 @@ body {
     padding-top: 16px;
     background: rgb(37, 37, 41);
     color: white;
-}
+} */

@@ -11,6 +11,16 @@ router.route("/profile").get((req, res) => {
     .catch((err) => res.status(400).json("Error:" + err));
 });
 
+// router.route("/profile").get(async (req, res) => {
+//   const userExist = await Register.findOne({
+//     username: username,
+//   });
+//   if (userExist) {
+//     res.status(200).send(userExist);
+//   } else {
+//     res.status(400).send("Something went wrong");
+//   }
+// });
 router.route("/profile/:id").get((req, res) => {
   Register.findById(req.params.id)
     .then((users) => res.json(users))
@@ -48,26 +58,7 @@ router.route("/register").post(async (req, res) => {
   }
 });
 
-// router.route("/register/:id").put(async (req, res) => {
-//   Register.findById(req.params.id)
-//     .then((user) => {
-//       user.name = req.body.name;
-//       user.account = req.body.account;
-//       user.phone = req.body.phone;
-//       user.adhaar = req.body.adhaar;
-//       user.email = req.body.email;
-//       user.username = req.body.username;
-//       user.password = req.body.password;
-//       user.amount = req.body.amount;
-//       user
-//         .save()
-//         .then(() => res.json("User's record updated"))
-//         .catch((err) => res.status(400).json("Error:" + err));
-//     })
-//     .catch((err) => res.status(400).json("Error:" + err));
-// });
-
-router.route("/register/update/:id").post(async(req, res) => {
+router.route("/register/update/:id").post(async (req, res) => {
   Register.findById(req.params.id)
     .then((user) => {
       user.name = req.body.name;

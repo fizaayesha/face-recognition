@@ -48,9 +48,6 @@ function Home() {
           of water to and from all of our homes.
         </p>
       </div>
-      <div className="footer">
-        <p>Copyright &copy; 2022 World Bank</p>
-      </div>
     </>
   );
 }

@@ -36,7 +36,8 @@ function Login() {
         window.alert("Invalid Credentials");
       } else {
         window.alert("LoggedIn succefully");
-        history.push("/profile");
+        // history.push("/profile");
+        history.push({ pathname: `/profile`, state: { user: user } });
       }
     } catch (error) {
       console.log(error);

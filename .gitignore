@@ -1,7 +1,4 @@
 # Local Netlify folder
 .netlify
-<<<<<<< HEAD
+# misc
 .vscode
-=======
-.vscode
->>>>>>> 783ed3eb3045a3f79f07213f5d88e309cf40381d

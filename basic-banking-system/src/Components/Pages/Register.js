@@ -179,9 +179,6 @@ function Register() {
           </div>
         </div>
       </div>
-      <div className="footer">
-        <p>Copyright &copy; 2022 World Bank</p>
-      </div>
     </>
   );
 }

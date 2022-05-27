@@ -17,7 +17,17 @@ router.route("/profile").get(function (req, res) {
   })["catch"](function (err) {
     return res.status(400).json("Error:" + err);
   });
-});
+}); // router.route("/profile").get(async (req, res) => {
+//   const userExist = await Register.findOne({
+//     username: username,
+//   });
+//   if (userExist) {
+//     res.status(200).send(userExist);
+//   } else {
+//     res.status(400).send("Something went wrong");
+//   }
+// });
+
 router.route("/profile/:id").get(function (req, res) {
   Register.findById(req.params.id).then(function (users) {
     return res.json(users);
@@ -73,25 +83,7 @@ router.route("/register").post(function _callee(req, res) {
       }
     }
   }, null, null, [[0, 17]]);
-}); // router.route("/register/:id").put(async (req, res) => {
-//   Register.findById(req.params.id)
-//     .then((user) => {
-//       user.name = req.body.name;
-//       user.account = req.body.account;
-//       user.phone = req.body.phone;
-//       user.adhaar = req.body.adhaar;
-//       user.email = req.body.email;
-//       user.username = req.body.username;
-//       user.password = req.body.password;
-//       user.amount = req.body.amount;
-//       user
-//         .save()
-//         .then(() => res.json("User's record updated"))
-//         .catch((err) => res.status(400).json("Error:" + err));
-//     })
-//     .catch((err) => res.status(400).json("Error:" + err));
-// });
-
+});
 router.route("/register/update/:id").post(function _callee2(req, res) {
   return regeneratorRuntime.async(function _callee2$(_context2) {
     while (1) {

@@ -8,6 +8,7 @@
     height: auto;
     display: flex;
     justify-content: center;
+    text-align: center;
     flex-wrap: wrap;
     align-items: center;
     padding-left: 160px;

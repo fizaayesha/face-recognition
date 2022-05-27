@@ -4,7 +4,6 @@ import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import StreetviewIcon from "@material-ui/icons/Streetview";
 import PowerSettingsNewIcon from "@material-ui/icons/PowerSettingsNew";
-import "./Navbar.css";
 function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -48,8 +47,17 @@ function Navbar(props) {
           </ul>
           {props.auth ? 
             <>
-              <NavLink
+              {/* <NavLink
                 to="/login"
+                className="btn btn-outline-primary ms-auto px-2 rounded-pill fw-bold"
+                id="btn1"
+                type="submit"
+              >
+                <ArrowForwardIcon className="me-1" />
+                <span className="text">Login</span>
+              </NavLink> */}
+              <NavLink
+                to="/auth"
                 className="btn btn-outline-primary ms-auto px-2 rounded-pill fw-bold"
                 id="btn1"
                 type="submit"
