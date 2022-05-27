@@ -3,8 +3,11 @@
 ### First of all in Backend folder create a new file and name it `.env` now copy the code given below and paste it in `.env` file
 
 ```
+<<<<<<< HEAD
 ATLAS_URI=mongodb+srv://Ayesha:Ayesha@cluster0.ijyss.mongodb.net/demo?retryWrites=true&w=majority
 SECRET_KEY=youcanchooseanysecretkeyof32character
+=======
+>>>>>>> 45a449bb3b17f9eebaf6f954a674663bcf06848b
 ```
 
 #
@@ -52,4 +55,8 @@ npm run hmr
 
 ## **Backend is running on port `5000`.**
 
+<<<<<<< HEAD
 ### Open [http://localhost:5000](http://localhost:5000) to view backend part in the browser in json format.
+=======
+### Open [http://localhost:5000](http://localhost:5000) to view backend part in the browser in json format.
+>>>>>>> 45a449bb3b17f9eebaf6f954a674663bcf06848b
