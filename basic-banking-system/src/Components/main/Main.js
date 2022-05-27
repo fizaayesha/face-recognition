@@ -4,6 +4,9 @@ import Loader from './Loader'
 import AuthCamera from './AuthCamera'
 import Failure from './Failure'
 import Success from './Success'
+import './style/style.css'
+import './style/style.css.map'
+import './style/style.scss'
 
 function Main() {
     const [data, setData] = useState({ 'camera': false, 'image': null })

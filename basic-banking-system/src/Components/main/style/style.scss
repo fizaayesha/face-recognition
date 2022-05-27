@@ -7,13 +7,13 @@
 	border: 0;
 }
 
-$accent-color: #e40072;
+$accent-color:  var(--primary-color);
 $navs-bg: #000000;
-$body-bg-l1: #212121;
-$body-bg-l2: #303030;
+$body-bg-l1: gray;
+$body-bg-l2: rgb(201, 198, 198);
 $body-bg-l3: #424242;
 $font-main: sans-serif;
-$font-color: #dddddd;
+$font-color: white;
 $font-display: 'Goldman', 'sans-serif', cursive;
 
 
@@ -133,6 +133,8 @@ main#auth{
 		flex-direction: column;
 		justify-content: center;
 		input, button{
+			color: $font-color;
+			background-color: var(--primary-color);
 			font-size: 1.2rem;
 			padding: 12px 15px;
 			margin-top: 15px;
@@ -241,7 +243,7 @@ main#loader{
     align-items: center;
     justify-content: center;
     h1, h2{
-        color: $accent-color;
+        color: $font-color;
 		font-family: $font-main;
 		margin-bottom: 20px;
 		text-align: center;

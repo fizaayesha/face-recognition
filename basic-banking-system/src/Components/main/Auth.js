@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-
+import './style/style.css'
+import './style/style.css.map'
+import './style/style.scss'
 function Auth(props) {
 	const [auth, setAuth] = useState({ type: 'login', username: '' })
 

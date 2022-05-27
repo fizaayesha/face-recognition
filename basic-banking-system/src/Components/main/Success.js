@@ -1,5 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './style/style.css'
+import './style/style.css.map'
+import './style/style.scss'
+
 
 function Success(props) {
   return (

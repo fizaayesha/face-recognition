@@ -1,4 +1,7 @@
 import React from 'react'
+import './style/style.css'
+import './style/style.css.map'
+import './style/style.scss'
 
 function NotFound() {
     return (

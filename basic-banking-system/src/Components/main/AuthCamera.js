@@ -1,7 +1,10 @@
 import React, { useState, useRef } from 'react'
 import Webcam from "react-webcam";
-
-
+import './style/style.css'
+import './style/style.css.map'
+import './style/style.scss'
+import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
+import VideoCameraFrontIcon from '@mui/icons-material/VideoCameraFront';
 function WebcamCapture(props){
     const webcamRef = useRef(null);
     const [cameraOn, setCameraOn] = useState(false)
@@ -32,10 +35,10 @@ function WebcamCapture(props){
             </div>
             <div className="controls">
                 <button id="capture" onClick={capture}>
-                    <i className="btn fas fa-camera"></i>
+                    <PhotoCameraIcon/>
                 </button>
                 <button id="stop" onClick={turnOnCamera}>
-                    <i className="btn fas fa-video-slash"></i>
+                    <VideoCameraFrontIcon/>
                 </button>
             </div>
         </main>
