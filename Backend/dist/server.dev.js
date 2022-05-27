@@ -15,7 +15,7 @@ var cookieParser = require("cookie-parser");
 require("dotenv").config();
 
 var app = express();
-var port = process.env.PORT || 8000; //these methods is used to get data and cookiess from frontend
+var port = process.env.PORT || 5000; //these methods is used to get data and cookiess from frontend
 
 app.use(express.json());
 app.use(express.urlencoded({

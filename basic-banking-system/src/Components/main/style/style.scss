@@ -477,7 +477,7 @@ main.result{
 	h2{ line-height: 2.5rem; }
 	h2.retry{
 		cursor: pointer;
-		color: blueviolet;
+		color: var(--primary-color);
 		&:hover{
 			color: red;
 		}

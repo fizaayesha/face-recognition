@@ -68,7 +68,7 @@ header h1 {
 header h1::after {
   content: '';
   padding: 0 13px;
-  background-color: #e40072;
+  background-color: var(--primary-color);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -737,7 +737,7 @@ main.result h2 {
 
 main.result h2.retry {
   cursor: pointer;
-  color: blueviolet;
+  color: var(--primary-color);
 }
 
 main.result h2.retry:hover {

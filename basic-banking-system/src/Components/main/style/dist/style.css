@@ -496,7 +496,7 @@ main.result h2 {
 }
 main.result h2.retry {
   cursor: pointer;
-  color: blueviolet;
+  color: var(--primary-color);
 }
 main.result h2.retry:hover {
   color: red;
