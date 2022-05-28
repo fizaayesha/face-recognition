@@ -34,7 +34,7 @@ npm run start
 ```
 cd Backend
 npm i
-npm run hmr
+python app.py
 ```
 
 #
@@ -50,8 +50,5 @@ npm run hmr
 
 ## **Backend is running on port `5000`.**
 
-<<<<<<< HEAD
 ### Open [http://localhost:5000](http://localhost:5000) to view backend part in the browser in json format.
-=======
 ### Open [http://localhost:5000](http://localhost:5000) to view backend part in the browser in json format.
->>>>>>> 45a449bb3b17f9eebaf6f954a674663bcf06848b

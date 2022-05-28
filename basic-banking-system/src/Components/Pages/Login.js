@@ -79,7 +79,6 @@ function Login() {
               <br />
               <div className="inputt">
                 <button
-                  // to="/mainpage"
                   type="submit"
                   className="btn rounded-pill"
                   id="btns"

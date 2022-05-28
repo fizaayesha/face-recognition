@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import "../Userdetails/User-content.css";
+import "../css/User-content.css";
 function Profile() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
@@ -11,18 +11,21 @@ function Profile() {
       .catch((err) => console.log(err));
   }, []);
 
-    let history = useHistory();
+  let history = useHistory();
   const transferHAndler = (username) => {
     // console.log(users);
-    history.push({ pathname: `/transfer/${username}`, state: { users: users } });
+    history.push({
+      pathname: `/transfer/${username}`,
+      state: { users: users },
+    });
   };
-  console.log(process.env.REACT_APP_SERVER_URL);
+  console.log(users);
   return (
     <>
       <div className="users">
         <div className="user">
           {users.map((user) => (
-            <div className="body" key={user.username}>
+            <div className="body">
               <div className="box">
                 <h6>Name: {user.name}</h6>
                 <h6>
@@ -30,10 +33,9 @@ function Profile() {
                   {user.account}
                 </h6>
                 <h6>Phone No: {user.phone}</h6>
-                <h6>Adhaar: Rs. {user.adhaar}</h6>
-                <h6>Email: Rs. {user.email}</h6>
-                {/* <h6>Username: Rs. {user.username}</h6> */}
-                {/* <h6>Password: Rs. {user.password}</h6> */}
+                <h6>Adhaar: {user.adhaar}</h6>
+                <h6>Email: {user.email}</h6>
+                <h6>Username: {user.username}</h6>
                 <h6>Amount: Rs. {user.amount}</h6>
                 <button
                   className="but"

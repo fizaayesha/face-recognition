@@ -8,7 +8,7 @@ const cookieParser = require("cookie-parser");
 require("dotenv").config();
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 
 //these methods is used to get data and cookiess from frontend
 app.use(express.json());
@@ -34,7 +34,7 @@ app.use(registrations);
 app.use(contactRouter);
 app.use(authenticate);
 
-app.get("/hehe", (req, res) => {
+app.get("/listen", (req, res) => {
   res.send("I am listening");
   console.log("I am listening");
 });

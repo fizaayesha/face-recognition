@@ -15,6 +15,14 @@ function Register() {
     amount: "",
   });
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setAuth((prev) => ({ ...prev, username: "" }));
+
+  //   if (auth.username !== "") props.submit(auth);
+  //   else alert("Enter a username first");
+  // };
+
   //HANDLE INPUT
   const handleInput = (event) => {
     let name = event.target.name;
@@ -32,7 +40,7 @@ function Register() {
     try {
       //it is submitted on port 3000 by default
       //which is frontend but we need to submit
-      // it on backend which is on port 5000
+      // it on backend which is on port 8000
       //So, we need  proxy
       const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/register`, {
         method: "POST",
@@ -53,7 +61,7 @@ function Register() {
       if (res.status === 400 || !res) {
         window.alert("Something went wrong,fill the credentials again");
       } else {
-        window.alert("Registerd succefully");
+        window.alert("Details added to your profile");
         history.push("/login");
       }
     } catch (error) {
@@ -172,7 +180,7 @@ function Register() {
                   id="btns"
                   style={{ paddingLeft: "20px", paddingRight: "20px" }}
                 >
-                  Register
+                  Submit
                 </button>
               </div>
             </form>

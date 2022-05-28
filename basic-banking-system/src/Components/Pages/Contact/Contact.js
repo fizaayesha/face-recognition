@@ -23,7 +23,7 @@ function Contact() {
     try {
       //it is submitted on port 3000 by default
       //which is frontend but we need to submit
-      // it on backend which is on port 5000
+      // it on backend which is on port 8000
       //So, we need  proxy
       const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/contact`, {
         method: "POST",

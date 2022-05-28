@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import StreetviewIcon from "@material-ui/icons/Streetview";
 import PowerSettingsNewIcon from "@material-ui/icons/PowerSettingsNew";
@@ -47,15 +46,6 @@ function Navbar(props) {
           </ul>
           {props.auth ? 
             <>
-              {/* <NavLink
-                to="/login"
-                className="btn btn-outline-primary ms-auto px-2 rounded-pill fw-bold"
-                id="btn1"
-                type="submit"
-              >
-                <ArrowForwardIcon className="me-1" />
-                <span className="text">Login</span>
-              </NavLink> */}
               <NavLink
                 to="/auth"
                 className="btn btn-outline-primary ms-auto px-2 rounded-pill fw-bold"
@@ -64,16 +54,6 @@ function Navbar(props) {
               >
                 <ArrowForwardIcon className="me-1" />
                 <span className="text">Login</span>
-              </NavLink>
-
-              <NavLink
-                to="/register"
-                className="btn btn-outline-light ms-2 px-2 rounded-pill fw-bold"
-                id="btn2"
-                type="submit"
-              >
-                <SupervisorAccountIcon className="me-1" />
-                Register
               </NavLink>
               <NavLink
                 to="/logout"

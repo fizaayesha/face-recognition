@@ -11,16 +11,6 @@ router.route("/profile").get((req, res) => {
     .catch((err) => res.status(400).json("Error:" + err));
 });
 
-// router.route("/profile").get(async (req, res) => {
-//   const userExist = await Register.findOne({
-//     username: username,
-//   });
-//   if (userExist) {
-//     res.status(200).send(userExist);
-//   } else {
-//     res.status(400).send("Something went wrong");
-//   }
-// });
 router.route("/profile/:id").get((req, res) => {
   Register.findById(req.params.id)
     .then((users) => res.json(users))
@@ -56,6 +46,12 @@ router.route("/register").post(async (req, res) => {
   } catch (err) {
     res.status(400).send(err);
   }
+});
+
+router.route("/register/:id").get((req, res) => {
+  Register.findById(req.params.id)
+    .then((users) => res.json(users))
+    .catch((err) => res.status(400).json("Error:" + err));
 });
 
 router.route("/register/update/:id").post(async (req, res) => {
@@ -114,61 +110,4 @@ router.route("/logout").get(async (req, res) => {
   res.status(200).send("User Logged Out");
 });
 
-// router.route("/profile/:id").get(async (req, res) => {
-//   try {
-//     // const name = req.body.name;
-//     // const account = req.body.account;
-//     // const phone = req.body.phone;
-//     // const email = req.body.email;
-//     // const adhaar = req.body.adhaar;
-//     // const amount = req.body.amount;
-//     //find user if exist
-//     const userExist = await Register.findById({
-//       // name: name,
-//       // account: account,
-//       // phone: phone,
-//       // email: email,
-//       // adhaar: adhaar,
-//       // amount: amount,
-//     });
-
-//     if (userExist) {
-//       return res.status(200).send(userExist);
-//     } else {
-//       return res.status(400).send("Something went wrong");
-//     }
-//   }
-//   catch (err) {
-//     return res.status(400).send(err);
-//   }
-// });
-
-// router.route("/profile").get(async (req, res) => {
-//   try {
-//     // const name = req.body.name;
-//     // const account = req.body.account;
-//     // const phone = req.body.phone;
-//     // const email = req.body.email;
-//     // const adhaar = req.body.adhaar;
-//     // const amount = req.body.amount;
-//     //find user if exist
-//     const userExist = await Register.find({
-//       // name: name,
-//       // account: account,
-//       // phone: phone,
-//       // email: email,
-//       // adhaar: adhaar,
-//       // amount: amount,
-//     });
-
-//     if (userExist) {
-//       return res.status(200).send(userExist);
-//     } else {
-//       return res.status(400).send("Something went wrong");
-//     }
-//   }
-//   catch (err) {
-//     return res.status(400).send(err);
-//   }
-// });
 module.exports = router;

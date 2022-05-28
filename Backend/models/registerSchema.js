@@ -48,23 +48,23 @@ const registerSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  password: {
-    type: String,
-    required: true,
-    unique: true,
-  },
+  // password: {
+  //   type: String,
+  //   required: true,
+  //   unique: true,
+  // },
   amount: {
     type: Number,
     required: true,
   },
-  tokens: [
-    {
-      token: {
-        type: String,
-        required: true,
-      },
-    },
-  ],
+  // tokens: [
+  //   {
+  //     token: {
+  //       type: String,
+  //       required: true,
+  //     },
+  //   },
+  // ],
 });
 
 //Hashing Password to secure

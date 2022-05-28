@@ -17,17 +17,7 @@ router.route("/profile").get(function (req, res) {
   })["catch"](function (err) {
     return res.status(400).json("Error:" + err);
   });
-}); // router.route("/profile").get(async (req, res) => {
-//   const userExist = await Register.findOne({
-//     username: username,
-//   });
-//   if (userExist) {
-//     res.status(200).send(userExist);
-//   } else {
-//     res.status(400).send("Something went wrong");
-//   }
-// });
-
+});
 router.route("/profile/:id").get(function (req, res) {
   Register.findById(req.params.id).then(function (users) {
     return res.json(users);
@@ -83,6 +73,13 @@ router.route("/register").post(function _callee(req, res) {
       }
     }
   }, null, null, [[0, 17]]);
+});
+router.route("/register/:id").get(function (req, res) {
+  Register.findById(req.params.id).then(function (users) {
+    return res.json(users);
+  })["catch"](function (err) {
+    return res.status(400).json("Error:" + err);
+  });
 });
 router.route("/register/update/:id").post(function _callee2(req, res) {
   return regeneratorRuntime.async(function _callee2$(_context2) {
@@ -203,59 +200,5 @@ router.route("/logout").get(function _callee4(req, res) {
       }
     }
   });
-}); // router.route("/profile/:id").get(async (req, res) => {
-//   try {
-//     // const name = req.body.name;
-//     // const account = req.body.account;
-//     // const phone = req.body.phone;
-//     // const email = req.body.email;
-//     // const adhaar = req.body.adhaar;
-//     // const amount = req.body.amount;
-//     //find user if exist
-//     const userExist = await Register.findById({
-//       // name: name,
-//       // account: account,
-//       // phone: phone,
-//       // email: email,
-//       // adhaar: adhaar,
-//       // amount: amount,
-//     });
-//     if (userExist) {
-//       return res.status(200).send(userExist);
-//     } else {
-//       return res.status(400).send("Something went wrong");
-//     }
-//   }
-//   catch (err) {
-//     return res.status(400).send(err);
-//   }
-// });
-// router.route("/profile").get(async (req, res) => {
-//   try {
-//     // const name = req.body.name;
-//     // const account = req.body.account;
-//     // const phone = req.body.phone;
-//     // const email = req.body.email;
-//     // const adhaar = req.body.adhaar;
-//     // const amount = req.body.amount;
-//     //find user if exist
-//     const userExist = await Register.find({
-//       // name: name,
-//       // account: account,
-//       // phone: phone,
-//       // email: email,
-//       // adhaar: adhaar,
-//       // amount: amount,
-//     });
-//     if (userExist) {
-//       return res.status(200).send(userExist);
-//     } else {
-//       return res.status(400).send("Something went wrong");
-//     }
-//   }
-//   catch (err) {
-//     return res.status(400).send(err);
-//   }
-// });
-
+});
 module.exports = router;
