@@ -1,23 +1,8 @@
-# Available Scripts
-
-### First of all in Backend folder create a new file and name it `.env` now copy the code given below and paste it in `.env` file
-
-```
-```
-
+### _Basic Banking System this project is the showcase that how banking system actually works. In banks, employee transafers customers no 1's money to the customer no 2. My project also perform the same operation but with extra security where admin(employee) have to register with username and a unique feature that face recognition of the admin will be necessary during registration, when admin registered successfully, then he/she have to login with same username and sit in the same posture when she/he was sitting during registration, when someone try to login usong photograph she/he unable to register, now when the admin loggedin successfully he/she can do transactions from one accountholder to the another._
 #
+# **_Python version 3.7.7 must be installed in your system_**
 
-### Also create `.env` file in basic-banking-system folder and copy the code given below and paste it inside the `.env` file
-
-```
-REACT_APP_SERVER_URL=http://localhost:5000
-```
-
-#
-
-#
-
-## **Now, in the project directory, split two terminals and you can run the commands given below in both the terminals separately:**
+## **In the project directory, split three terminals and you can run the commands given below in the terminals separately:**
 
 ## In one terminal
 
@@ -34,6 +19,18 @@ npm run start
 ```
 cd Backend
 npm i
+npm run hmr
+```
+
+#
+
+## In third terminal
+
+```
+cd Backend
+python -m venv pytorch-application
+source pytorch-application/bin/activate
+pip install -r requirements.txt
 python app.py
 ```
 
@@ -46,9 +43,3 @@ python app.py
 ### Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 #
-#
-
-## **Backend is running on port `5000`.**
-
-### Open [http://localhost:5000](http://localhost:5000) to view backend part in the browser in json format.
-### Open [http://localhost:5000](http://localhost:5000) to view backend part in the browser in json format.
