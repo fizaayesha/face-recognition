@@ -71,10 +71,10 @@ function About() {
               style={{ width: "36rem", height: "36rem" }}
             />
             <div className="carousel-caption d-md-block">
-              <h5>World BANK, anytime anywhere</h5>
+              <h5>World BANK, quick process</h5>
               <p>
-                Online transactions are not bound by the geographical limits,
-                you can transact anytime, anywhere
+                With large number of employees in our bank, customers not have
+                to wait for very long for their work
               </p>
             </div>
           </div>

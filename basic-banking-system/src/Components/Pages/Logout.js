@@ -10,12 +10,12 @@ function Logout() {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        credentials: "include",
+        // credentials: "include",
       });
       if (res.status === 401 || !res) {
         window.alert("Please logout later");
       } else {
-        history.push("/home");
+        history.push("/");
         window.location.reload();
       }
     } catch (err) {

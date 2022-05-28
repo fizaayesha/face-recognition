@@ -44,7 +44,7 @@ function Navbar(props) {
               </a>
             </li>
           </ul>
-          {props.auth ? 
+          {props.auth ? (
             <>
               <NavLink
                 to="/auth"
@@ -60,24 +60,24 @@ function Navbar(props) {
                 className="btn btn-outline-primary ms-2 px-3 rounded-pill fw-bold"
                 id="btn2"
                 type="submit"
-                >
+              >
                 <PowerSettingsNewIcon className="me-2" />
                 Logout
               </NavLink>
-                </>
-               : 
-               <>
+            </>
+          ) : (
+            <>
               <NavLink
                 to="/profile"
                 className="btn btn-outline-light ms-2 px-3 rounded-pill fw-bold"
                 id="btn2"
                 type="submit"
-                >
+              >
                 <StreetviewIcon className="me-2" />
                 Profile
               </NavLink>
             </>
-          }
+          )}
         </div>
       </div>
     </nav>

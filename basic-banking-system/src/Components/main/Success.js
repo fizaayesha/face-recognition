@@ -17,7 +17,7 @@ function Success(props) {
             id="btns"
             style={{ paddingLeft: "20px", paddingRight: "20px" }}
           >
-            GO to Profile
+            Existing Users
           </button>
         </Link>
         <Link to="/register">
@@ -27,7 +27,7 @@ function Success(props) {
             id="btns"
             style={{ paddingLeft: "20px", paddingRight: "20px" }}
           >
-            Create new user
+            Create New User
           </button>
         </Link>
       </div>

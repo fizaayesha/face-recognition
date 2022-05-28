@@ -10,18 +10,8 @@ function Register() {
     phone: "",
     adhaar: "",
     email: "",
-    username: "",
-    password: "",
     amount: "",
   });
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setAuth((prev) => ({ ...prev, username: "" }));
-
-  //   if (auth.username !== "") props.submit(auth);
-  //   else alert("Enter a username first");
-  // };
 
   //HANDLE INPUT
   const handleInput = (event) => {
@@ -35,12 +25,11 @@ function Register() {
     event.preventDefault();
     //object destructing
     //store object data into variable
-    const { name, account, phone, adhaar, email, username, password, amount } =
-      user;
+    const { name, account, phone, adhaar, email, amount } = user;
     try {
       //it is submitted on port 3000 by default
       //which is frontend but we need to submit
-      // it on backend which is on port 8000
+      // it on backend which is on port 5001
       //So, we need  proxy
       const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/register`, {
         method: "POST",
@@ -53,8 +42,6 @@ function Register() {
           phone,
           adhaar,
           email,
-          username,
-          password,
           amount,
         }),
       });
@@ -62,7 +49,7 @@ function Register() {
         window.alert("Something went wrong,fill the credentials again");
       } else {
         window.alert("Details added to your profile");
-        history.push("/login");
+        history.push("/profile");
       }
     } catch (error) {
       console.log(error);
@@ -95,7 +82,7 @@ function Register() {
                   type="number"
                   className="form-control"
                   id="account"
-                  placeholder="Acount No."
+                  placeholder="Acount No. (Length 9-18)"
                   name="account"
                   value={user.account}
                   onChange={handleInput}
@@ -107,7 +94,7 @@ function Register() {
                   type="number"
                   className="form-control"
                   id="phone"
-                  placeholder="Mobile Number"
+                  placeholder="Mobile Number (Length 10)"
                   name="phone"
                   value={user.phone}
                   onChange={handleInput}
@@ -119,7 +106,7 @@ function Register() {
                   type="number"
                   className="form-control"
                   id="phone"
-                  placeholder="Adhaar Number"
+                  placeholder="Adhaar Number  (Length 12)"
                   name="adhaar"
                   value={user.adhaar}
                   onChange={handleInput}
@@ -134,30 +121,6 @@ function Register() {
                   placeholder="Email Address"
                   name="email"
                   value={user.email}
-                  onChange={handleInput}
-                />
-              </div>
-              <div className="inputt">
-                <label htmlFor="username" className="form-label"></label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="username"
-                  placeholder="Username"
-                  name="username"
-                  value={user.username}
-                  onChange={handleInput}
-                />
-              </div>
-              <div className="inputt">
-                <label htmlFor="password" className="form-label"></label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  placeholder="Must include special characters eg. #$&* etc."
-                  name="password"
-                  value={user.password}
                   onChange={handleInput}
                 />
               </div>

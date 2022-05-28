@@ -1,3 +1,5 @@
+// Transaction history of every customer
+
 import React, { useState, useEffect } from "react";
 import "./Transactions.css";
 import axios from "axios";
@@ -13,7 +15,6 @@ const Transactions = () => {
       .get(`${process.env.REACT_APP_SERVER_URL}/transactions`)
       .then((res) => setTransaction(res.data))
       .catch((err) => console.log(err));
-    console.log(transaction);
   }, [transaction]);
   return (
     <>

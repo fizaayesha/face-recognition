@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import avatar from "../Assets/use-avatar.svg";
 import { useHistory } from "react-router-dom";
 import "../css/User-content.css";
 function Profile() {
@@ -25,18 +26,19 @@ function Profile() {
       <div className="users">
         <div className="user">
           {users.map((user) => (
-            <div className="body">
+            <div className="body" key={user.username}>
+              <img src={avatar} alt="avatar" style={{ width: "10rem" }} />
               <div className="box">
-                <h6>Name: {user.name}</h6>
-                <h6>
+                <h6 key={user.name}>Name: {user.name}</h6>
+                <h6 key={user.account}>
                   Account No:
                   {user.account}
                 </h6>
-                <h6>Phone No: {user.phone}</h6>
-                <h6>Adhaar: {user.adhaar}</h6>
-                <h6>Email: {user.email}</h6>
-                <h6>Username: {user.username}</h6>
-                <h6>Amount: Rs. {user.amount}</h6>
+                <h6 key={user.phone}>Phone No: {user.phone}</h6>
+                <h6 key={user.adhaar}>Adhaar: {user.adhaar}</h6>
+                <h6 key={user.email}>Email: {user.email}</h6>
+                <h6 key={user.username}>Username: {user.username}</h6>
+                <h6 key={user.amount}>Amount: Rs. {user.amount}</h6>
                 <button
                   className="but"
                   id={user.id}

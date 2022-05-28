@@ -19,18 +19,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var InstructionsList = [{
   image: _Login["default"],
-  text: "Create Account by filling the credentials name, mobile no., email, username, password, adhaar no, account no. and amount transfer to your account"
+  text: "Admin here perform the fuctions of transactions, so admin have to register first by entering his/her username, then face detection will take place, so admin have to sit properly."
 }, {
   image: _detection["default"],
-  text: "Every bank provide internet banking to the accountholders with privacy and security, but World BANK provides you much more than this, you can only login when your face detect succeessfully"
+  text: "After successful registration, now admin have to login with the same username, now face recognition in which admin have to sit in the posture as was sitting during registration."
 }, {
   image: _Status["default"],
-  text: "You can check your available balance by just clicking on 'users' section after logging in"
+  text: "Admin have to create account for the for the customers and only admin can do transactions where the customers want, and this is how the banking system works."
 }, {
   image: _Transafer["default"],
-  text: "You can transfer money to any bank's account holder from anywhere at any time, you only have to choose name, account no. and enter amount. Quick and easy transactions"
+  text: "Whenever accountholders wants to check their bank balance or their transaction history, they have to go to admin, admin will ask their name, after that he/she will provide all the required data to the accountholders."
 }, {
   image: _logout["default"],
-  text: "Make sure that you have logged out, when done with your work"
+  text: "If admin forgot to logout then, he/she will be automatically logout when the pages reloa or refresh."
 }];
 exports.InstructionsList = InstructionsList;

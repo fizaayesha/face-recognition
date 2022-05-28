@@ -23,12 +23,6 @@ function Main() {
         setCameraAuthScreen(false)
         setResult(null)
         setFailureMessage("")
-        setSuccessMessage("")
-        setUserName("")
-    }
-
-    function imageData(cameraOn, imageSrc){
-        setData({ 'camera': cameraOn, 'image': imageSrc })
     }
     
     // Auth level #1 --> check the database for username
