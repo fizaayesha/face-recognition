@@ -1,6 +1,5 @@
 import { createContext } from "react";
 import React, { useState, useEffect } from "react";
-// import axios from 'axios';
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -52,41 +51,15 @@ function App() {
         <Route path="/instructions" exact component={Instructions} />
         <Route path="/contact" exact component={Contact} />
         <ProtectedRoutes path="/auth" exact component={Main} auth={auth1} />
-        <ProtectedRoutes
-          path="/register"
-          exact
-          component={Register}
-          auth={auth1}
-        />
-        <ProtectedRoutes
-          path="/transactions"
-          exact
-          component={Transactions}
-          auth={auth1}
-        />
+        <ProtectedRoutes path="/register" exact component={Register} auth={auth1}/>
+        <ProtectedRoutes path="/transactions" exact component={Transactions} auth={auth1}/>
         <ProtectedRoutes path="/logout" exact component={Logout} auth={auth} />
-        <ProtectedRoutes
-          path="/transfer/:id"
-          exact
-          component={Transfer}
-          auth={auth1}
-        />
-        <ProtectedRoutes
-          path="/success"
-          exact
-          component={Successport}
-          auth={auth1}
-        />
-        <ProtectedRoutes
-          path="/profile"
-          exact
-          component={Profile}
-          auth={auth1}
-        />
+        <ProtectedRoutes path="/transfer/:id" exact component={Transfer} auth={auth1}/>
+        <ProtectedRoutes path="/success" exact component={Successport} auth={auth1}/>
+        <ProtectedRoutes path="/profile" exact component={Profile}auth={auth1}/>
       </Switch>
     </Router>
   );
 }
 
 export default App;
-//we cant access them if auth is false

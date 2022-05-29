@@ -4,7 +4,8 @@ var express = require("express");
 
 var router = new express.Router();
 
-var Contact = require("../models/contactSchema"); //contact page messages
+var Contact = require("../models/contactSchema"); //Routing for contact page
+//contact page messages
 
 
 router.route("/contact").post(function _callee(req, res) {

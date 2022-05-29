@@ -2,7 +2,7 @@ const express = require("express");
 const router = new express.Router();
 const Register = require("../models/registerSchema");
 
-//registrations
+//Routing for accountholders
 router.route("/profile").get((req, res) => {
   Register.find()
     .then((users) => res.json(users))

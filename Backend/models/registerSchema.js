@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-//Register Schema
+//Schema for accountholders
 const registerSchema = new mongoose.Schema({
   name: {
     type: String,

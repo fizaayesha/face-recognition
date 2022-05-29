@@ -19,7 +19,6 @@ const Transfer = (props) => {
 
   //Amount input handler
   function amountHandler(event) {
-    // console.log(event.target.value);
     setAmount(event.target.value);
   }
 
@@ -33,11 +32,8 @@ const Transfer = (props) => {
     const senderComps = customs.find((user) => user._id === s);
     const receiverComps = customs.find((user) => user._id === r);
     const transAmount = a;
-    // console.log(transAmount);
     senderComps.amount = senderComps.amount - transAmount;
-    // console.log(senderComps);
     receiverComps.amount = Number(receiverComps.amount) + Number(transAmount);
-    // console.log(receiverComps);
     updateHandler(senderComps, receiverComps, transAmount);
     history.push("/success");
   };

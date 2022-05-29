@@ -1,8 +1,9 @@
 "use strict";
 
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
-var Schema = mongoose.Schema;
+var Schema = mongoose.Schema; //Transaction History Schema
+
 var transactionSchema = new Schema({
   sender: {
     type: String,
@@ -21,5 +22,5 @@ var transactionSchema = new Schema({
     "default": Date.now
   }
 });
-var transaction = mongoose.model('transaction', transactionSchema);
+var transaction = mongoose.model("transaction", transactionSchema);
 module.exports = transaction;

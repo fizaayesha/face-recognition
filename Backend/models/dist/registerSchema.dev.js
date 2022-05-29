@@ -1,6 +1,6 @@
 "use strict";
 
-var mongoose = require("mongoose"); //Register Schema
+var mongoose = require("mongoose"); //Schema for accountholders
 
 
 var registerSchema = new mongoose.Schema({

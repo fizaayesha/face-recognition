@@ -4,7 +4,7 @@ var express = require("express");
 
 var router = new express.Router();
 
-var Register = require("../models/registerSchema"); //registrations
+var Register = require("../models/registerSchema"); //Routing for accountholders
 
 
 router.route("/profile").get(function (req, res) {

@@ -24,7 +24,7 @@ class User(db.Model):
   def __repr__(self):
     return '<User %r>' % self.username
 
-
+#Admin Registration
 @app.route('/register', methods=['POST'])
 @cross_origin()
 def signup():
@@ -35,7 +35,7 @@ def signup():
   else:
     return  jsonify({ 'user': '' })
 
-
+#Admin Login
 @app.route('/login', methods=['POST'])
 @cross_origin()
 def login():

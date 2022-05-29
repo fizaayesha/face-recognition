@@ -24,7 +24,11 @@ function Main() {
         setResult(null)
         setFailureMessage("")
     }
+    function imageData(cameraOn, imageSrc){
+        setData({ 'camera': cameraOn, 'image': imageSrc })
+    }
     
+
     // Auth level #1 --> check the database for username
     const submit = async ({type, username}) => {
         try{

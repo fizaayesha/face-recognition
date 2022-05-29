@@ -2,6 +2,7 @@ const express = require("express");
 const router = new express.Router();
 const Contact = require("../models/contactSchema");
 
+//Routing for contact page
 //contact page messages
 router.route("/contact").post(async (req, res) => {
   try {

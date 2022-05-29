@@ -14,7 +14,6 @@ function Profile() {
 
   let history = useHistory();
   const transferHAndler = (username) => {
-    // console.log(users);
     history.push({
       pathname: `/transfer/${username}`,
       state: { users: users },

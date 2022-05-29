@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const TransHist = require("../models/transactions");
 
+
+//Routing for transactions and transaction history
 //get trasactions
 router.route("/transactions").get((req, res) => {
   TransHist.find()

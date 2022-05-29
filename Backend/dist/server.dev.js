@@ -9,8 +9,7 @@ var mongoose = require("mongoose");
 require("dotenv").config();
 
 var app = express();
-var port = process.env.PORT || 5001; //these methods is used to get data and cookiess from frontend
-
+var port = process.env.PORT || 5001;
 app.use(express.json());
 app.use(express.urlencoded({
   extended: false
@@ -25,7 +24,7 @@ mongoose.connect(uri, {
 var connection = mongoose.connection;
 connection.once("open", function () {
   console.log("mongodb database connection established successfully!");
-});
+}); //calling all the routes so that backend can work
 
 var transactionRouter = require("./routes/trasactionhist");
 

@@ -20,7 +20,7 @@ function Register() {
     setUser({ ...user, [name]: value });
   };
 
-  //handle submit
+  //HANDLE SUBMIT
   const handleSubmit = async (event) => {
     event.preventDefault();
     //object destructing

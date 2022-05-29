@@ -7,7 +7,6 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 5001;
 
-//these methods is used to get data and cookiess from frontend
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
@@ -23,6 +22,7 @@ connection.once("open", () => {
   console.log("mongodb database connection established successfully!");
 });
 
+//calling all the routes so that backend can work
 const transactionRouter = require("./routes/trasactionhist");
 const registrations = require("./routes/register");
 const contactRouter = require("./routes/contact");
