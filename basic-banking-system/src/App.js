@@ -1,6 +1,6 @@
 import { createContext } from "react";
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import "./App.css"; 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./Components/Navbar";
