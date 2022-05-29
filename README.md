@@ -2,7 +2,7 @@
 
 #
 #
-# **_Python version 3.7.7 must be installed in your system (Backend commands are only for windows operating system)_**
+# **_Python version 3.7.7 must be installed in your system_**
 
 ## **In the project directory, split three terminals and you can run the commands given below in the terminals separately:**
 
@@ -26,7 +26,7 @@ npm run hmr
 
 #
 
-## In third terminal
+## In third terminal (commands for windows)
 
 ```
 cd Backend
