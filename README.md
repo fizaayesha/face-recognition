@@ -2,7 +2,7 @@
 
 #
 #
-# **_Python version 3.7.7 must be installed in your system_**
+# **_Python version 3.7.7 must be installed in your system (Backend commands are only for windows operating system)_**
 
 ## **In the project directory, split three terminals and you can run the commands given below in the terminals separately:**
 
@@ -31,7 +31,7 @@ npm run hmr
 ```
 cd Backend
 python -m venv pytorch-application
-source pytorch-application/bin/activate
+.\pytorch-application\Scripts\activate
 pip install -r requirements.txt
 python app.py
 ```
