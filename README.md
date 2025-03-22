@@ -1,5 +1,5 @@
 # Face Recognition-Based Banking System
-
+This project is an enhancement of one of my full stack project
 ## Overview
 This project is a highly secure banking system that utilizes face recognition technology instead of traditional passwords for authentication. The system ensures that physical appearance of user is needed. Similarly, if a user has already registered but tries to log in using a photo instead of their real face, the system will detect it as a fake face and deny access
 
